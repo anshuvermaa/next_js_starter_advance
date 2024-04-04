@@ -40,3 +40,5 @@ next-env.d.ts
 /.stash
 
 README-*.md
+
+*storybook.log

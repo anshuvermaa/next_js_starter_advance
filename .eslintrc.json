@@ -1,14 +1,39 @@
+// {
+//   "extends": "next/core-web-vitals",
+//   "globals": {
+//     "React": "readonly"
+//   },
+//   "rules": {
+//     "no-unused-vars":  
+//     [
+//       1, { "args": "after-used", "argsIgnorePattern": "^_" }
+//   ]
+// // "no-unused-vars": 0, // As example: Will never bug you about unused variables again
+  
+//   }
+// }
+
+
+
 {
-  "extends": "next/core-web-vitals",
+  "extends": [
+    "plugin:storybook/recommended",
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "prettier"
+  ],
+  "plugins": ["prettier"],
   "globals": {
     "React": "readonly"
   },
+  "overrides": [
+    {
+      "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"]
+    }
+  ],
   "rules": {
-    "no-unused-vars":  
-    [
-      1, { "args": "after-used", "argsIgnorePattern": "^_" }
-  ]
-// "no-unused-vars": 0, // As example: Will never bug you about unused variables again
-  
+    "no-unused-vars": "warn",
+    "no-console": "warn"
   }
 }
