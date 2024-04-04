@@ -1,14 +1,58 @@
 {
-  "extends": "next/core-web-vitals",
-  "globals": {
-    "React": "readonly"
-  },
+  "extends": ["next", "next/core-web-vitals", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
     "no-unused-vars":  
     [
       1, { "args": "after-used", "argsIgnorePattern": "^_" }
-  ]
-// "no-unused-vars": 0, // As example: Will never bug you about unused variables again
-  
+  ],
+    "prettier/prettier": "warn",
+    "no-console": "warn"
   }
 }
+
+
+// adavnce 
+// {
+// 	"env": {
+// 		"browser": true,
+// 		"es2021": true,
+// 		"node": true
+// 	},
+// 	"extends": [
+// 		"eslint:recommended",
+// 		"next",
+// 		"next/core-web-vitals",
+// 		"plugin:@typescript-eslint/recommended",
+// 		"plugin:react/recommended",
+// 		"plugin:storybook/recommended",
+// 		"prettier"
+// 	],
+// 	"globals": {
+// 		"React": "readonly"
+// 	},
+// 	"parser": "@typescript-eslint/parser",
+// 	"parserOptions": {
+// 		"ecmaVersion": "latest",
+// 		"sourceType": "module"
+// 	},
+// 	"plugins": ["@typescript-eslint", "react"],
+// 	"rules": {
+// 		"@typescript-eslint/no-unused-vars": ["error"],
+// 		"@typescript-eslint/no-unnecessary-type-assertion": "off",
+// 		"no-multiple-empty-lines": [2, { "max": 99999, "maxEOF": 0 }],
+// 		"no-unused-vars": "off",
+// 		"no-unused-expressions": "off",
+// 		"no-useless-return": ["error"],
+// 		"react/no-unescaped-entities": 0,
+// 		"react/no-unknown-property": [
+// 			2,
+// 			{
+// 				"ignore": ["jsx"]
+// 			}
+// 		],
+// 		"react/react-in-jsx-scope": "off",
+// 		"semi": [1, "never"],
+// 		"react/prop-types": "off"
+// 	}
+// }
